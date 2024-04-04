@@ -74,10 +74,10 @@ public class CalendarTests extends DriverSetup {
         Assert.assertTrue(calendarsPage.calendarsPageLoaded(), "Calendars page is not loaded");
 
         calendarsPage.validateCalendarDisplayed("Tasks");
-//        calendarsPage.clickHideAllButton();
+        calendarsPage.clickHideAllButton();
 
-//        calendarsPage.validateCalendarSelected("Tasks");
-//        Assert.assertFalse(calendarsPage.validateCalendarSelected("Tasks"), "Calendar is selected");
+        calendarsPage.validateCalendarSelected("Tasks");
+        Assert.assertFalse(calendarsPage.validateCalendarSelected("Tasks"), "Calendar is selected");
 
         calendarsPage.clickMoreInfoButton();
         Assert.assertTrue(editCalendarPage.editCalendarPageLoaded(), "Edit calendar page is not loaded");
